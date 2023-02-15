@@ -5,8 +5,11 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    command: nodemon server.js
     depends_on:
       - mongodb
+    volumes:
+      - ./:/app
     ports:
       - "3000:3000"
   mongodb:
