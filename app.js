@@ -5,6 +5,8 @@ import { userPlugin } from "./routes/user/plugin.js";
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from "ajv-formats";
 import { mongooseConnect } from "./libs/mongoose.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const ajv = new Ajv2020({
     coerceTypes: true,
